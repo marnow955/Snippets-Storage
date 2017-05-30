@@ -1,0 +1,46 @@
+Vial is a picoframework (if they can make up names, so can I!).
+
+It provides:
+- routing with parameters in URI's,
+- handling of data transmitted in a request's body,
+- Jinja2 templating engine.
+
+Have fun and please, don't blame me:)
+
+Drink demo app
+==============
+
+In general, modern applications are started separately from web servers.
+After they are started, they communicate with other programs using
+a particular port (like 9090). Then, web server is just a proxy
+to applications. You can see the configuration for Apache HTTPD2 in
+`contrib/` directory.
+
+So, the first step is to run the application itself:
+
+1. To run this demo app you should use uwsgi:
+
+myhost$ ls
+drink.py
+drink.ini
+vial.py
+static/
+myhost$ uwsgi --ini drink.ini
+
+It will start the application on 127.0.0.1:9090
+Please, mind that this way, you can access the application
+from `myhost` (like od.iem.pw.edu.pl). You CAN'T acces it
+writing `http://od.iem.pw.edu.pl:9090` from computers in lab.
+
+CAUTION
+You could test the application alone by changing:
+127.0.0.1 to 0.0.0.0
+But this way you only have HTTP connection. It is useful only
+for debugging
+CAUTION
+
+Next, we need to start the web server:
+
+2. apache2 -f /absolute/path/to/apache2-uwsgi.conf -e debug -X
+
+Now you can access the Apache instance on the configured port (by default 1234).
