@@ -5,6 +5,7 @@ from parse import parse
 from jinja2 import Template
 from os.path import isfile
 from mimetypes import guess_type
+from flask import Flask, url_for
 
 STATUS_CODE = {
     200: '200 OK',

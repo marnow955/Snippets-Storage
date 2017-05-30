@@ -2,7 +2,11 @@
 from vial import Vial, render_template
 
 def index(headers, body, data):
-  return 'Hello', 200, {}
+  return render_template('index.html'), 200, {}
+  #return 'Hello', 200, {}
+
+def register(headers, body, data):
+  return render_template('register.html'), 200, {}
 
 def hello(headers, body, data, name):
   return 'Howdy ' + name, 200, {}
@@ -13,6 +17,7 @@ def upload(headers, body, data):
 
 routes = {
   '/': index,
+  '/register': register,
   '/hello/{name}': hello,
   '/upload': upload,
 }
