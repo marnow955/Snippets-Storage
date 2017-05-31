@@ -1,3 +1,6 @@
+body {
+  text-align: center;
+}
 .page {
   width: 360px;
   padding: 8% 0 0;
@@ -58,4 +61,66 @@ input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focu
 .ms {
   font-size: 15px;
   color: #555;
+}
+
+
+.iconm { 
+  padding-left: 15%;
+  display: inline-block;
+  font-size: 35px;
+}
+.snippets-list{
+  padding: 20px;
+  margin: 30px;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+
+}
+.snippet-button{
+  text-align: center;
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.snippet-button:hover, .mbutton:hover{
+  background-color: #EEE;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+.snippet-button:active, .mbutton:active{
+  background-color: #DDD;
+  box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+}
+.mbutton{
+  float: right;
+  display: inline-block;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+.menubar{
+  width: 94%;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-bottom: 1px solid #D3D3D3;
+}
+.dbutton{
+  float: left;
+  display: inline;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+#logout{
+}
+a.sa{
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }

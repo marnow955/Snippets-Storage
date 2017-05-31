@@ -13,7 +13,14 @@
      <link rel="stylesheet" href="static/css/styles.css" type="text/css" />
    </head>
    <body>
-     logoin:{{ data['username'] }},
-     password:{{ data['password'] }},
+     <body>
+     <div class="menubar">
+       <div class="iconm"><i class="fa fa-code"></i> Snippets Storage</div>
+       <div class="mbutton" id="logout"><a class="sa" href="logout">Sign out</a></div>
+       <div class="mbutton" id="settb"><a class="sa" href="settings">Settings</a></div>
+     </div>
+     <div class="snippets-list" id="idlist">
+       <div class="snippet-button" id="upload"><a class="sa" href="upload">+</a></div>
+     </div>
    </body>
  </html>

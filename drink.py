@@ -36,6 +36,11 @@ def regist(headers, body, data):
 
 def login(headers, body, data):
   try:
+    if int(data['logged']==1) and data['userid']:
+      return upload(headers, "logged", data)
+  except:
+    pass
+  try:
     email = str(data['email'])
     password = str(data['password'])
     if login_user(email, password):
