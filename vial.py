@@ -5,7 +5,13 @@ from parse import parse
 from jinja2 import Template
 from os.path import isfile
 from mimetypes import guess_type
-from flask import Flask, url_for
+
+NOT_FOUND = "<h1>Object not found!</h1>\
+\
+The requested URL was not found on this server. If you entered the URL manually please check your spelling and try again.\
+<br/><br/>\
+If you think this is a server error, please contact the webmaster.\
+<br/><h2>Error 404</h2>"
 
 STATUS_CODE = {
     200: '200 OK',
@@ -51,8 +57,9 @@ def serve_static(headers, body, data, filepath):
     return content, 200, {'Content-Type' : content_type or 'text/plain'}
 
 def not_found(headers, body, data, uri, prefix):
-    return 'Could not find a handler for URI %s (prefix: %s)' \
-         % (uri, prefix), 404, {}
+    return NOT_FOUND, 404, {}
+    #return 'Could not find a handler for URI %s (prefix: %s)' \
+    #     % (uri, prefix), 404, {}
 
 def render_template(template_filename, **kwargs):
     with open(template_filename, 'r') as f:

@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-from vial import Vial, render_template
+from vial import Vial, render_template, not_found
 
 prefix = "Snippets-Storage"
-not_found = "<h1>Object not found!</h1>\
-\
-The requested URL was not found on this server. If you entered the URL manually please check your spelling and try again.\
-<br/><br/>\
-If you think this is a server error, please contact the webmaster.\
-<br/><h2>Error 404</h2>"
 
 def index(headers, body, data):
   #if data['username'] != 'admin' or data['password'] != 'admin':
@@ -30,7 +24,7 @@ def login(headers, body, data):
     else:
       return upload(headers, "else", data)
   except:
-    return not_found, 404, {}
+    return not_found(headers, body, data, headers['request-uri'], prefix)
 
 def main(headers, body, data):
   return render_template('main.html', body=body, data=data), 200, {}
