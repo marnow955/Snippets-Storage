@@ -55,3 +55,7 @@ input[type="submit"]:hover,input[type="submit"]:active,input[type="submit"]:focu
   font-size: 25px;
   padding-bottom: 15px;
 }
+.ms {
+  font-size: 15px;
+  color: #555;
+}

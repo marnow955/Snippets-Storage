@@ -16,11 +16,22 @@
      <div class="page">
        <div class="form">
 	 <div class="icon"><i class="fa fa-code"></i> Snippets Storage</div>
-         <form class="register-form" id="rejestracja-form" action="register.php" method="post">
-	   <input type="text" placeholder="Username" name = "username" id="username" maxlength="10" required/>
+         <form class="register-form" id="rejestracja-form" action="regist" method="post">
+	   <input type="email" placeholder="Email" name = "email" id="email" maxlength="255" required/>
 	   <input type="password" placeholder="Password" name = "password1" id="password1"required/>
-	   <input type="password" placeholder="Confirm password" name = "password2" id="password2" required/>
+	   <input type="password" placeholder="Confirm password" name = "password2" id="password2" oninput="check(this)" required/>
 	   <input type="submit" value="SIGN UP">
+	   <script language='javascript' type='text/javascript'>
+    	     function check(input) {
+               if (input.value != document.getElementById('password1').value) {
+                 input.setCustomValidity('Password Must be Matching.');
+               } else {
+                 // input is valid -- reset the error message
+                 input.setCustomValidity('');
+               }
+             }
+
+           </script>
 	   <p class="message">You have an account? <a href="/">Sign in</a>.</p>
 	 </form>
        </div>

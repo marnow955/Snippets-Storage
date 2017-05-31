@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas generowania: 30 Maj 2017, 20:13
+-- Czas generowania: 31 Maj 2017, 19:17
 -- Wersja serwera: 5.7.18-0ubuntu0.16.04.1
 -- Wersja PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -41,7 +41,7 @@ CREATE TABLE `snippets` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `login` varchar(10) COLLATE utf8_polish_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_polish_ci NOT NULL,
   `password` text COLLATE utf8_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 

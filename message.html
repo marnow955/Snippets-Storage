@@ -16,12 +16,10 @@
      <div class="page">
        <div class="form">
 	 <div class="icon"><i class="fa fa-code"></i> Snippets Storage</div>
-         <form class="login-form" id="login-form" action="login" method="post">
-           <input type="email" placeholder="Email" name = "email" id="email" maxlength="255" required/>
-           <input type="password" placeholder="Password" name = "password" id="password" pattern=".{8,}" required title="At least 8 characters"/>
-           <input type="submit" value="SIGN IN">
-           <p class="message">New to Snippets Storage? <a href="register">Sign up!</a></p>
-         </form>
+	 {% if data['message'] %}
+           <p class="ms">{{ data['message'] }}
+         {% endif %}
+         <p class="message">Follow: <a href="{{ data['href'] }}">{{ data['hrefmess'] }}</a></p>
        </div>
      </div>
    </body>
