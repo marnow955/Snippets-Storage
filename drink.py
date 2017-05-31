@@ -46,3 +46,4 @@ routes = {
 }
 
 app = Vial(routes, prefix=prefix, static='/static').wsgi_app()
+
